@@ -6,11 +6,10 @@ public class Solution1342 {
     while (number > 0) {
       if (number % 2 == 0) {
         number = number / 2;
-        steps++;
       } else {
         number = number - 1;
-        steps++;
       }
+      steps++;
     }
 
     return steps;
