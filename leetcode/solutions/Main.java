@@ -2,11 +2,9 @@ package leetcode.solutions;
 
 class Main {
     public static void main(String[] args) {
-        Solution1480 solution = new Solution1480();
-        int[] nums = {1, 2, 3, 4};
-        int[] result = solution.runningSum(nums);
-        for (int num : result) {
-            System.out.print(num + " ");
-        }
+        Solution1672 solution = new Solution1672();
+        int[][] accounts = {{7, 1, 3}, {2, 8, 7}, {1, 9, 5}};
+        int richestCustomerWealth = solution.richestCustomerWealth(accounts);
+        System.out.println(richestCustomerWealth);
     }
 }
