@@ -4,10 +4,10 @@ public class Solution1342 {
   public int numberOfStepsToReduceNumberToZero(int number) {
     int steps = 0;
     while (number > 0) {
-      if (number % 2 == 0) {
-        number = number / 2;
+      if ((number & 1) == 0) {
+        number >>= 1;
       } else {
-        number = number - 1;
+        number--;
       }
       steps++;
     }
