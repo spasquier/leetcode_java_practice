@@ -1,10 +1,14 @@
 package leetcode.solutions;
 
+import java.util.List;
+
 class Main {
     public static void main(String[] args) {
-        Solution1672 solution = new Solution1672();
-        int[][] accounts = {{7, 1, 3}, {2, 8, 7}, {1, 9, 5}};
-        int richestCustomerWealth = solution.richestCustomerWealth(accounts);
-        System.out.println(richestCustomerWealth);
+        Solution412 solution = new Solution412();
+        int n = 20;
+        List<String> fizzBuzzList = solution.fizzBuzz(n);
+        for (String element: fizzBuzzList) {
+            System.out.println(element);
+        }
     }
 }
