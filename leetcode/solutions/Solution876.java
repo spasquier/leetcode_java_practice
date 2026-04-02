@@ -1,8 +1,5 @@
 package leetcode.solutions;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -16,14 +13,14 @@ import java.util.List;
 class Solution876 {
 
     public ListNode middleNode(ListNode head) {
-        List<ListNode> nodes = new ArrayList<>();
-        ListNode currentHead = head;
-        int length = 0;
-        while(currentHead != null) {
-            nodes.add(currentHead);
-            currentHead = currentHead.next;
-            length++;
+        ListNode middle = head;
+        ListNode end = head;
+
+        while(end != null && end.next !=null) {
+            middle = middle.next;
+            end = end.next.next;
         }
-        return nodes.get(length / 2);
+
+        return middle;
     }
 }
